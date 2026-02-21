@@ -1,0 +1,17 @@
+@layer starwind.layout {
+    :where(sw-divider-stacked) {
+        display: block;
+    }
+
+    :where(sw-divider-stacked) > :where(* + *) {
+        margin-block-start: var(
+            --sw-divider-stacked-gap,
+            var(--sw-gap, var(--sw-space-s-m, 1rem))
+        );
+        padding-block-start: var(
+            --sw-divider-stacked-rule-gap,
+            var(--sw-space-xs-s, 0.5rem)
+        );
+        border-block-start: var(--sw-divider-stacked-rule, 0);
+    }
+}
